@@ -190,7 +190,7 @@ VOID CGameHook::giveItems() {
 	} else {
 		SItemBuffer items = { 1, {item.address, item.count, -1} };
 		int unknown = 1;
-		ItemRandomiser->ItemGibOriginal(*mapItemMan, &items, &unknown);
+		ItemRandomiser->HookedItemGib(*mapItemMan, &items, &unknown);
 	}
 	Core->saveConfigFiles = true;
 }
